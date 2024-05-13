@@ -23,7 +23,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.mbti.ui.theme.MBTITheme
 
-class EnfjActivity : ComponentActivity() {
+class EntpActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -36,30 +36,27 @@ class EnfjActivity : ComponentActivity() {
                     }) {
                         Text(text = "닫기")
                     }
-                    EnfjActivityScreen()
+                    EntpScreen()
                 }
             }
         }
     }
+
 }
-
-
 @Composable
-fun EnfjActivityScreen() {
+fun EntpScreen() {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.enfj),
+            painter = painterResource(id = R.drawable.entp),
             contentDescription = null,
             contentScale = ContentScale.Fit,
             modifier = imageModifier
         )
     }
 }
-
-
 private val imageModifier = Modifier
     .size(500.dp)
     .border(BorderStroke(1.dp, Color.White))
